@@ -32,7 +32,7 @@ initDB:
 	${JAVA} -classpath .:./database edu.rice.rubbos.client.InitDB ${PARAM}
 
 emulator:
-	${JAVA} -classpath .:Client/rubbos_client.jar edu.rice.rubbos.client.ClientEmulator
+	${JAVA} -classpath .:Client/rubbos.properties:Client/rubbos_client.jar edu.rice.rubbos.client.ClientEmulator
 
 
 ############################
