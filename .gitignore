@@ -1,5 +1,4 @@
 *.class
 *.jar
 bench/flush_cache
-PHP/config.php
 
