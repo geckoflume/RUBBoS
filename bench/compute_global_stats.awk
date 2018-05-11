@@ -1,4 +1,4 @@
-#!/bin/awk -f
+#!/usr/bin/awk -f
 
 # Caller must set nbscript and path values on the command line.
 # Example: compute_global_stats.awk -v path=2001-10-10@14:55:23/ -v nbscript=2 2001-10-10@14:55:23/stat_client0.html
@@ -46,7 +46,7 @@ BEGIN {
 	  # Display the total
 	  if (stateNb == 0)
 	    stateNb = 1000000000000000000000000; # make stateNb infinite so that division result will give 0.
-	  printf "<TR><TD><div align=left><B>Total</div></B><TD><div align=right><B>100 %</B></div><TD><div align=right><B>%d</B></div><TD><div align=right><B>%d</B></div><TD><div align=center>-</div><TD><div align=center>-</div><TD><div align=right><B>%.0f ms</B></div>", totalCount, totalErrors, totalTime/totalCount >> outputFile;
+	  printf "<TR><TD><div align=left><B>Total</B></div><TD><div align=right><B>100 %%</B></div><TD><div align=right><B>%d</B></div><TD><div align=right><B>%d</B></div><TD><div align=center>-</div><TD><div align=center>-</div><TD><div align=right><B>%.0f ms</B></div>", totalCount, totalErrors, totalTime/totalCount >> outputFile;
 	}
       else if ($0 ~ "<TR><TD><div align=left><B>Average throughput</div>")
 	{ # Average throughput
